@@ -1,0 +1,1 @@
+cargo watch -x 'build --example game --target wasm32-unknown-unknown'
