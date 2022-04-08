@@ -13,7 +13,7 @@ fn main() {
 
     let speed = 5.0;
 
-    set_event_handler(move |event| match event {
+    set_event_handler(move |context, event| match event {
         Event::Draw => {
             x_position += x_direction * speed;
             y_position += y_direction * speed;
@@ -25,8 +25,8 @@ fn main() {
             if y_position <= 0.0 || y_position >= 500.0 {
                 y_direction *= -1.0;
             }
-            clear_screen_to_color(0.0, 0.0, 0.3, 1.0);
-            draw_rectangle(x_position, y_position, 100., 100.);
+            context.clear_screen_to_color(0.0, 0.0, 0.3, 1.0);
+            context.draw_rectangle(x_position, y_position, 100., 100.);
         }
         _ => {}
     })
