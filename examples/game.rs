@@ -26,7 +26,7 @@ fn main() {
                 y_direction *= -1.0;
             }
             context.clear_screen_to_color(0.0, 0.0, 0.3, 1.0);
-            context.draw_rectangle(x_position, y_position, 100., 100.);
+            context.draw_rectangle(x_position, y_position, 100., 100., 1.0, 0.0, 0.0, 1.0);
         }
         _ => {}
     })
